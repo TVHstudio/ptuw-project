@@ -18,20 +18,20 @@ app.get('/', (req,res) => {
     res.render('index');
 });
 
-app.get('/:page', (req,res) => {
-    let banners = {
-        blog : 'Our blog',
-        category : 'Shop Category',
-        cart : 'Shopping Cart',
-        checkout : 'Checkout',
-        confirmation : 'Confirmation',
-        contact : 'Contact',
-        register : 'Register',
-        login : 'login',
-    };
-    let page = req.params.page;
-    res.render(page, {banner: banners[page]});
-});
+// app.get('/:page', (req,res) => {
+//     let banners = {
+//         blog : 'Our blog',
+//         category : 'Shop Category',
+//         cart : 'Shopping Cart',
+//         checkout : 'Checkout',
+//         confirmation : 'Confirmation',
+//         contact : 'Contact',
+//         register : 'Register',
+//         login : 'login',
+//     };
+//     let page = req.params.page;
+//     res.render(page, {banner: banners[page]});
+// });
 
 app.get('/blog', (req,res) => {
     res.render('blog');
