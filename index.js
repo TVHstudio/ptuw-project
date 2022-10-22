@@ -2,9 +2,9 @@ let express = require('express');
 let app = express();
 
 
-app.use(express.static(__dirname + '/aroma'));
+app.use(express.static(__dirname + '/public'));
 //use view engine
-let expressHbs =require('express-handlebars');
+let expressHbs = require('express-handlebars');
 let hbs = expressHbs.create({
     extname : 'hbs',
     defaultLayout : 'layouts',
