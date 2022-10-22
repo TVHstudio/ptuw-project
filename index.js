@@ -1,5 +1,5 @@
-let express = require('express');
-let app = express();
+const express = require('express');
+const app = express();
 
 
 app.use(express.static(__dirname + '/public'));
@@ -15,7 +15,8 @@ app.engine('hbs',hbs.engine);
 app.set('view engine', 'hbs');
 
 app.get('/', (req,res) => {
-    res.render('index');
+    //res.render('index');
+    res.send('hello')
 });
 
 // app.get('/:page', (req,res) => {
